@@ -1,6 +1,6 @@
 <h1 align="center"><a href="https://github.com/8090lambert/hexo-easy-theme">hexo-easy-theme</a></h1>
 
-<p align="center">hexo-easy-theme is a high quality elegant <a href="http://hexo.io">Hexo</a> theme.</p>
+hexo-easy-theme is a high quality elegant [Hexo](http://hexo.io) theme.
  
 This theme build on **[aero-dual](https://github.com/levblanc/hexo-theme-aero-dual)**, and it integrated other Customization things. It is make for quickly building you blog, enjoy it!
 
