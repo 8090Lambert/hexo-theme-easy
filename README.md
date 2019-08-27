@@ -4,6 +4,8 @@ hexo-easy-theme is a high quality elegant [Hexo](http://hexo.io) theme.
  
 This theme build on **[aero-dual](https://github.com/levblanc/hexo-theme-aero-dual)**, and it integrated other Customization things. It is make for quickly building you blog, enjoy it!
 
+![](https://raw.githubusercontent.com/8090Lambert/material/master/preview.jpg)
+
 **[Demo here](http://8090lambert.cn)**
 
 ## Features
