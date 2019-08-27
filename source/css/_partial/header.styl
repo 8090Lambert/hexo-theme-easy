@@ -1,0 +1,189 @@
+/* normal style */
+.site-header
+  padding remify(40px) 0
+  border-bottom 1px solid $theme-seperator
+  margin-bottom remify(30px)
+  &.header-background
+    border-bottom 0
+    background-color gray
+    background-position center center
+    background-attachment scroll
+    -webkit-background-size cover
+    -moz-background-size cover
+    background-size cover
+    -o-background-size cover
+  .page-title
+    color $theme-color
+    text-align center
+    text-shadow 1px 1px 2px $color-black
+    &.with-background-image
+      color $color-white
+      padding remify(120px) 0
+    .title
+      font-family 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+      font-weight 600
+      font-size remify(40px)
+      margin-bottom 10px
+    .subtitle
+      font-size remify(20px)
+
+.site-menu
+  text-align center
+  margin-top remify(10px)
+  text-shadow 3px 3px 3px $color-black
+  ul
+    margin 0 auto
+    padding 0
+    > li
+      display inline-block
+      margin-right remify(10px)
+      &:last-child
+        margin-right 0
+      > a
+        padding remify(3px) remify(10px)
+        border-radius remify(2px)
+  &.with-background-image
+    a
+      color $color-white
+
+/* mobile style */
+@media only screen and (max-width: 414px)
+  .site-header
+    .page-title
+      &.with-background-image
+        padding remify(30px) 0
+      .title
+        font-size remify(22px)
+  .site-menu
+    font-size remify(16px)
+    ul li
+      margin-right 0
+      > a
+        padding remify(3px) remify(6px)
+
+/* menu style */
+.navbar-custom
+  position absolute
+  top 0
+  left 0
+  width 100%
+  z-index 3
+  @extend .sans-serif
+  .navbar-brand
+    font-weight 800
+  .nav
+    li
+      a
+        text-transform uppercase
+        font-size 12px
+        font-weight 800
+        letter-spacing 1px
+        text-decoration none
+  @media only screen and (min-width: 768px)
+    background transparent
+    border-bottom 1px solid transparent
+    .navbar-brand
+      color white
+      padding 20px
+      &:hover, &:focus
+        color white-faded
+    .nav
+      li
+        a
+          font-size remify(15px)
+          color white
+          padding 20px
+          &:hover, &:focus
+            color white-faded
+  @media only screen and (min-width: 1170px)
+    -webkit-transition background-color 0.3s
+    -moz-transition background-color 0.3s
+    transition background-color 0.3s
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform translate3d(0, 0, 0)
+    -moz-transform translate3d(0, 0, 0)
+    -ms-transform translate3d(0, 0, 0)
+    -o-transform translate3d(0, 0, 0)
+    transform translate3d(0, 0, 0)
+    -webkit-backface-visibility hidden
+    backface-visibility hidden
+    &.is-fixed
+      /* when the user scrolls down, we hide the header right above the viewport */
+      position fixed
+      top -61px
+      background-color rgba(255, 255, 255, 0.9)
+      border-bottom 1px solid darken(rgb(255, 255, 255, 1), 5%)
+      -webkit-transition -webkit-transform 0.3s
+      -moz-transition -moz-transform 0.3s
+      transition transform 0.3s
+      .navbar-brand
+        color gray-dark
+        &:hover, &:focus
+          color brand-primary
+      .nav
+        li
+          a
+            color gray-dark
+            &:hover, &:focus
+              color brand-primary
+    &.is-visible
+      /* if the user changes the scrolling direction, we show the header */
+      -webkit-transform translate3d(0, 100%, 0)
+      -moz-transform translate3d(0, 100%, 0)
+      -ms-transform translate3d(0, 100%, 0)
+      -o-transform translate3d(0, 100%, 0)
+      transform translate3d(0, 100%, 0)
+
+
+.intro-header
+  background-color gray
+  background-position center center
+  background-attachment scroll
+  @extend .background-cover
+  margin-bottom 50px
+  .site-heading, .post-heading, .page-heading
+    padding 100px 0 50px
+    color white
+    @media only screen and (min-width: 768px)
+      padding 150px 0
+    &.archives
+      color brand-primary
+      margin-top 60px
+  .site-heading, .page-heading
+    text-align center
+    h1
+      margin-top 0
+      font-size 50px
+    .subheading
+      font-size 24px
+      line-height 1.1
+      display block
+      @extend .sans-serif
+      font-weight 300
+      margin 10px 0 0
+    @media only screen and (min-width: 768px)
+      h1
+        font-size 80px
+  .post-heading
+    h1
+      font-size 35px
+    .subheading, .meta
+      line-height 1.1
+      display block
+    .subheading
+      @extend .sans-serif
+      font-size 24px
+      margin 10px 0 30px
+      font-weight 600
+    .meta
+      @extend .serif
+      font-style italic
+      font-weight 300
+      font-size 20px
+      a
+        color white
+    @media only screen and (min-width: 768px)
+      h1
+        font-size 55px
+      .subheading
+        font-size 30px

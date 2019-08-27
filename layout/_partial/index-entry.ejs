@@ -1,0 +1,59 @@
+<div class="post-item-wrapper">
+  <a href="<%- url_for(post.path) %>" class="post-title">
+      <%= post.title || __('post.untitled_post') %>
+  </a>
+
+  <!-- Post Meta Data -->
+  <div class="post-meta">
+    <% if (theme.post_wordcount.wordcount || theme.post_wordcount.min2read) { %>
+        <div class="post-wordcount">
+          <% if (theme.post_wordcount.wordcount) { %>
+            <% if (!theme.post_wordcount.separated_meta) { %>
+              <span class="post-meta-divider">|</span>
+            <% } %>
+            <span class="post-meta-item-icon">
+              <i class="fa fa-file-word-o"></i>
+            </span>
+            <% if (theme.post_wordcount.item_text) { %>
+              <span class="post-meta-item-text"><%- __('post.wordcount') %>&#58;</span>
+            <% } %>
+            <span title="<%- __('post.wordcount') %>">
+              <%- wordcount(post.content) %>
+            </span>
+          <% } %>
+
+          <% if (theme.post_wordcount.wordcount && theme.post_wordcount.min2read) { %>
+            <span class="post-meta-divider">|</span>
+          <% } %>
+
+          <% if (theme.post_wordcount.min2read) { %>
+            <span class="post-meta-item-icon">
+              <i class="fa fa-clock-o"></i>
+            </span>
+            <% if (theme.post_wordcount.item_text) { %>
+              <span class="post-meta-item-text"><%- __('post.min2read') %> &asymp;</span>
+            <% } %>
+            <span title="<%- __('post.min2read') %>">
+              <%- min2read(post.content) %>
+            </span>
+          <% } %>
+        </div>
+    <% } %>
+
+    <div class="time-meta">
+        <span><%- post.date.format('ll') %></span>
+        <% if (theme.post_meta.updated_at) { %>
+        <span class="meta-item">
+            Updated <%- post.updated.format('ll') %>
+        </span>
+        <% } %>
+    </div>
+  </div>
+
+  <div class="post-excerpt">
+    <!-- Post Excerpt Use A Portion Of Article -->
+    <% if (theme.auto_excerpt.enable) { %>
+    <div class="excerpt typo"><%- truncate(strip_html(post.content), {length: theme.auto_excerpt.length}) %></div>
+    <% } %>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<% if (post.comments) { %>
+    <% if (theme.disqus_shortname) { %>
+        <%- partial('../plugins/comments/disqus') %>
+    <% } %>
+
+    <% if (theme.uyan_uid) { %>
+    <%- partial('../plugins/comments/uyan') %>
+    <% } %>
+
+    <% if (theme.gitment.enable) { %>
+    <%- partial('../plugins/comments/gitment') %>
+    <% } %>
+
+    <% if (theme.gitalk.enable) { %>
+    <%- partial('../plugins/comments/gitalk') %>
+    <% } %>
+
+    <% if (theme.valine.enable) { %>
+    <%- partial('../plugins/comments/valine') %>
+    <% } %>
+
+    <% if (theme.hyper_id) { %>
+    <%- partial('../plugins/comments/hyper-comments') %>
+    <% } %>
+<% } %>

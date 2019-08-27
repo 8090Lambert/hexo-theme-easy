@@ -1,0 +1,39 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="<%= page.description || '' %>">
+  <meta name="author" content="<%= config.author || '' %>">
+  <% if(theme.google_site_verification){ %>
+      <meta name="google-site-verification" content="<%- theme.google_site_verification %>">
+  <% }%>
+  <% if(theme.sogou_site_verification){ %>
+      <meta name="sogou_site_verification" content="<%- theme.sogou_site_verification %>">
+  <% } %>
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="<%= page.title || config.title || '' %>"/>
+  <meta property="og:description" content="<%= page.description || config.description || '' %>" />
+  <meta property="og:site_name" content="<%= config.title || '' %>"/>
+  <meta property="og:type" content="<%= page.title ? 'article' : 'website' %>" />
+  <meta property="og:image" content="<%= config.url %><%= config.cover %>"/>
+  <% if (theme.rss) { %>
+    <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+  <% if (theme.favicon) { %>
+    <link rel="icon" href="<%- theme.favicon %>">
+  <% } %>
+
+  <!-- Site Title -->
+  <title><%- config.title %></title>
+
+  <!-- Bootstrap CSS -->
+  <%- css('css/bootstrap.min.css') %>
+  <%- css('css/font-awesome.min.css') %>
+  <!-- Custom CSS -->
+  <%- css('css/style.css') %>
+
+  <!-- Google Analytics -->
+  <%- partial('plugins/statistics/google-analytics') %>
+  <!-- BaiDu Analytics -->
+  <%- partial('plugins/statistics/baidu') %>
+</head>

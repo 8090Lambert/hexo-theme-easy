@@ -1,0 +1,42 @@
+/* remify mixins from https://davidwalsh.name/stylus-rem */
+base-font-size(value) {
+    font-size: value; /* add PX (or original value) as backup */
+
+    if (value is inherit) {
+        /* do nothing, "inherit" has no unit */
+    } else {
+        font-size: remify(value);
+    }
+}
+
+remify(value) { /* separate mixin, so it can be used elsewhere */
+    u = unit(value);
+
+    if (u is 'px') {
+        return unit(value/16, 'rem');
+    } else {
+        return unit(value, u);
+    }
+  }
+
+background-cover()
+  -webkit-background-size cover
+  -moz-background-size cover
+  background-size cover
+  -o-background-size cover
+
+.background-cover
+  background-cover()
+
+serif()
+  font-family 'Lora', 'Times New Roman', serif
+
+.serif
+  serif()
+
+sans-serif()
+  font-family 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+
+.sans-serif
+  sans-serif()
+
