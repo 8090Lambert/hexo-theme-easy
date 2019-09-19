@@ -1,9 +1,9 @@
-<h1 align="center"><a href="https://github.com/8090lambert/hexo-easy-theme">hexo-easy-theme</a></h1>
+<h1 align="center"><a href="https://github.com/8090lambert/hexo-easy-theme">hexo-easy-theme （<a href="https://github.com/8090Lambert/hexo-easy-theme/blob/master/README.zh_CN.md">中文版</a>）</a></h1>
 
 hexo-easy-theme is a high quality elegant [Hexo](http://hexo.io) theme.
  
 This theme reference **[aero-dual](https://github.com/levblanc/hexo-theme-aero-dual)**, then integrated other Customization things. It is make for quickly building you blog.   
-**Ok，Enjoy yourself** 😀!
+**Ok，Enjoy yourself** :grinning:
 
 ![](https://raw.githubusercontent.com/8090Lambert/material/master/preview.jpg)
 
