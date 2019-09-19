@@ -1,56 +1,45 @@
 <h1 align="center"><a href="https://github.com/8090lambert/hexo-easy-theme">hexo-easy-theme</a></h1>
 
-hexo-easy-theme is a high quality elegant [Hexo](http://hexo.io) theme.
- 
-This theme reference **[aero-dual](https://github.com/levblanc/hexo-theme-aero-dual)**, then integrated other Customization things. It is make for quickly building you blog.   
-**Ok，Enjoy yourself** 😀!
+`hexo-easy-theme` 一款让你爱不释手的优雅、高度配置化，简单易用的 `hexo` 主题，个人博客也在用自己，嘻嘻，欢迎 star~ 
+> 参考 **[aero-dual](https://github.com/levblanc/hexo-theme-aero-dual)**，集成其他定制的东西。 它是快速建立你的博客，开始享受它吧！ 
 
 ![](https://raw.githubusercontent.com/8090Lambert/material/master/preview.jpg)
 
 **[Demo here](http://8090lambert.cn)**
 
-## Features
-- Comments system
-    - Disqus
-    - Gitalk
-    - Gitment
-    - Hypercomments
-    - UYan
-    - Valine
-- Analytics and Statistics
-    - Google
-    - Baidu
+## Feature
+截止到目前为止，主题内集成了下列这些功能，都是即插即用，可以根据自己的需求来。
+- 评论系统
+    - [Disqus](https://wordpress.org/plugins/disqus-comment-system/) 
+    - [Gitalk](https://github.com/gitalk/gitalk)
+    - [Gitment](https://github.com/imsun/gitment)
+    - [Hypercomments](https://www.hypercomments.com/)
+    - [Valine](https://leancloud.cn/)
+- 统计 & 分析
+    - [Google](https://analytics.google.com/analytics/web/#/report-home/a146263529w208108969p200684717)
+    - [Baidu](https://tongji.baidu.com/web/welcome/login)
     - Sougou
     - CNZZ
-- Image cover for post page
-- Highlight syntax for code block
-- Customization footer for you
-- Text and icon for menu
-- Pv statistics with busuanzi
+- 文章封面图
+- 代码块高亮
+- 个性化页脚定义
+- 定制化`menu`
+- 全站 pv 统计
+- 首页的文章`metadata`定制
 
-## Install
+## 安装
 ```
+$ cd hexo (hexo main directory)
 $ git clone https://github.com/8090lambert/hexo-easy-theme.git themes/easy
 ```
-> Note: Please let you Hexo version great than or equal to 3.2
 
-## Usage
-Set theme in main **hexo config** `_config.yml` file:
+## 配置文件
 ```
-# Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: easy
+$ vi themes/easy/_config.yml
 ```
 
-## Preview
-You can use command `hexo server` to start a local server see your change.
-
-## Configuration
-These configuration options in theme `_config.yml` file，unless special illustration.
-
-### Menu
-This menu support `text` or `icon(font-awesome)`, for example:
+### 菜单
+集成了 `font-awesome`，在菜单可以选择 `文本` 和 `Icon`:
 ```
 # Header Menu
 menu:
@@ -63,7 +52,7 @@ menu:
     icon: github
 ```
 
-### Home Cover Image
+### 首页封面图
 ```
 # URL of the Home page image, For example:
 # index_cover: /img/default-banner.jpg
@@ -71,7 +60,8 @@ menu:
 index_cover: /img/default-banner.jpg
 ```
 
-### Auto excerpt
+### 文章摘要
+默认 200 字
 ```
 # Use post content to trim portion text.
 auto_excerpt:
@@ -79,8 +69,8 @@ auto_excerpt:
   length: 200   # trim length, default 200
 ```
 
-### Post MetaData
-Dependent on `hexo-wordcount`，you should install before using：  
+### 文章 MetaData
+依赖`hexo-wordcount`，需要提前安装：
 `
 $ cd hexo_dict && npm install hexo-wordcount --save
 `
@@ -102,7 +92,8 @@ post_wordcount:
   separated_meta: true
 ```
 
-### Comments
+### 评论系统
+选择一个要使用的平台，申请对应的 appid & appkey (不允许同时开启多个)
 ```
 # Many Comment Drivers, you can choose one to open it.
 # Write your configure of which platform.
@@ -146,7 +137,7 @@ valine:
 hyper_id: false
 ```
 
-### Custom Footer
+### 页脚
 ```
 # Footer setting.
 footer:
@@ -164,7 +155,7 @@ footer:
   powered: false
 ```
 
-### PV Statistics
+### 全站 PV 统计
 ```
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
@@ -173,7 +164,8 @@ busuanzi_count:
   enable: true
 ```
 
-### Analytics
+### 统计 & 分析
+根据自己需要去开启，可以同时启用多个
 ```
 # Google Analytics Write your tracking id here, or false to disable.s
 google_analytics: 
@@ -188,7 +180,3 @@ baidu_tongji: false
 # Sougou Verification.
 sogou_site_verification: false
 ```
-
-## License
-
-MIT
