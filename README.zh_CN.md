@@ -1,6 +1,6 @@
-<h1 align="center"><a href="https://github.com/8090lambert/hexo-easy-theme">hexo-easy-theme</a></h1>
+<h1 align="center"><a href="https://github.com/8090lambert/hexo-theme-easy">hexo-theme-easy</a></h1>
 
-`hexo-easy-theme` 一款让你爱不释手的优雅、高度配置化，简单易用的 `hexo` 主题，个人博客也在用自己，嘻嘻，欢迎 star~ 
+`hexo-theme-easy` 一款让你爱不释手的优雅、高度配置化，简单易用的 `hexo` 主题，个人博客也在用自己，嘻嘻，欢迎 star~ 
 > 参考 **[aero-dual](https://github.com/levblanc/hexo-theme-aero-dual)**，集成其他定制的东西。 它是快速建立你的博客，开始享受它吧！ 
 
 ![](https://raw.githubusercontent.com/8090Lambert/material/master/preview.jpg)
@@ -30,7 +30,7 @@
 ## 安装
 ```
 $ cd hexo (hexo main directory)
-$ git clone https://github.com/8090lambert/hexo-easy-theme.git themes/easy
+$ git clone https://github.com/8090lambert/hexo-theme-easy.git themes/easy
 ```
 
 ## 配置文件
